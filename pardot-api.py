@@ -21,7 +21,7 @@ p.authenticate()
 #昨日以降に作成されたプロスペクトを抽出
 prospects = p.prospects.query(created_after='yesterday')
 total = prospects['total_results']
+#1名ずつ名前を抽出
 for prospect in prospects['prospect']:
-	#1名ずつ名前を抽出
     print(prospect.get('first_name'))
  
